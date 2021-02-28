@@ -1,0 +1,15 @@
+rootProject.name = 'CarParkDriver'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+// uso do Firebase App
+include ':@react-native-firebase_app'
+project(':@react-native-firebase_app').projectDir = new File(rootProject.projectDir, './../node_modules/@react-native-firebase/app/android')
+
+// uso do Firebase DataBase
+include ':@react-native-firebase_database'
+project(':@react-native-firebase_database').projectDir = new File(rootProject.projectDir, './../node_modules/@react-native-firebase/database/android')
+
+// uso do Firebase Storage
+include ':@react-native-firebase_storage'
+project(':@react-native-firebase_storage').projectDir = new File(rootProject.projectDir, './../node_modules/@react-native-firebase/storage/android')
